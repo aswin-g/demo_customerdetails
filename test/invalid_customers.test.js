@@ -68,9 +68,30 @@ describe('Save Customer Details Feature - Invalid Scenarios', () => {
         logger.debug('\n\n #END# Save Customer16: ' + ' -  \n\nResponse  = ', body, '\n====================================================\n');
         expect(body.error).to.equals('\'bank_country_code\' is required, and should be one of \'US\', \'AU\', or \'CN\'');
         done();
+        });
       });
 
-     step ('8. Missing ABA', (done) => {
+      step ('8. Missing Account Number', (done) => {
+             payload = customers.customer9;
+              logger.debug('\n\n#TEST# Save Customer17: ' + ' - \n\n====================================================\nRequest  = ', payload);
+              client.service.saveCustomer(payload, (body) => {
+              logger.debug('\n\n #END# Save Customer17: ' + ' -  \n\nResponse  = ', body, '\n====================================================\n');
+              expect(body.error).to.equals('Length of account_number should be between 8 and 20 when bank_country_code is \'CN\'');
+              done();
+            });
+      });
+
+      step ('9. Invalid Payment Method', (done) => {
+             payload = customers.customer9;
+              logger.debug('\n\n#TEST# Save Customer18: ' + ' - \n\n====================================================\nRequest  = ', payload);
+              client.service.saveCustomer(payload, (body) => {
+              logger.debug('\n\n #END# Save Customer18: ' + ' -  \n\nResponse  = ', body, '\n====================================================\n');
+              expect(body.error).to.equals('Length of account_number should be between 8 and 20 when bank_country_code is \'CN\'');
+              done();
+            });
+      });
+
+     step ('10. Missing ABA', (done) => {
        payload = customers.customer14;
         logger.debug('\n\n#TEST# Save Customer14: ' + ' - \n\n====================================================\nRequest  = ', payload);
         client.service.saveCustomer(payload, (body) => {
@@ -81,7 +102,7 @@ describe('Save Customer Details Feature - Invalid Scenarios', () => {
       });
     });
 
-    step ('9. Invalid AU Account Number', (done) => {
+    step ('11. Invalid AU Account Number', (done) => {
             let payload = customers.customer8;
               logger.debug('\n\n#TEST# Save Customer8: ' + ' - \n\n====================================================\nRequest  = ', payload);
               client.service.saveCustomer(payload, (body) => {
@@ -91,7 +112,7 @@ describe('Save Customer Details Feature - Invalid Scenarios', () => {
             });
     });
 
-      step ('10. Invalid CN Account Number', (done) => {
+      step ('12. Invalid CN Account Number', (done) => {
              payload = customers.customer9;
               logger.debug('\n\n#TEST# Save Customer9: ' + ' - \n\n====================================================\nRequest  = ', payload);
               client.service.saveCustomer(payload, (body) => {
@@ -100,5 +121,4 @@ describe('Save Customer Details Feature - Invalid Scenarios', () => {
               done();
             });
       });
-  });
 });
