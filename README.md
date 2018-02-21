@@ -1,9 +1,12 @@
 # Customer details Endpoint - API Automation
 
-How to setup automation project and run tests in your local:
+##How to setup automation project and run tests in your local:
 
-Pre-requisites: Make sure you have NVM, NPM and Git installed in your local
+Pre-requisites:
+1. You should have Mac or Linux or Cygwin on Win OS to start with
+2. Make sure you have NVM, NPM and Git installed in your local
 
+Steps to setup in local:
 1. Goto Terminal and type 'git clone https://github.com/aswin-g/demo_customerdetails.git'
 2. Type `npm install` - All the dependencies from package.json will be installed in your local
 3. Type `Source shell/preview.sh` or `Source shell/demo.sh` - This will set the endpoint URLs with respect to the environment we wish to run
