@@ -1,0 +1,69 @@
+{
+	"globals": {
+		"accounts" : true,
+		"request" : true,
+		"expect": true,
+		"should": true,
+		"jurisdiction": true,
+		"entrypoints": true,
+		"builder": true,
+		"client": true,
+		"log4js": true,
+		"logger": true,
+		"step": true,
+		"tags": true,
+		"config": true,
+		"account": true,
+		"tabAccountNumber": true,
+		"kenoAccountNumber": true,
+		"iphoneUser1Token": true,
+		"androidUser1Token": true,
+		"webUser1Token": true,
+		"mochaShared": true,
+		"getAuthToken": true,
+		"authenticate": true,
+		"apiUrl": true,
+		"signature": true,
+		"chance": true,
+		"moment": true,
+		"href": true,
+		"envUrls": true,
+		"offer_api_url": true,
+		"campaignCode": true
+	},
+	"plugins": [
+		"mocha"
+	],
+	"rules": {
+		"indent": [
+			2,
+			4
+		],
+		"quotes": [
+			2,
+			"single"
+		],
+		"linebreak-style": [
+			2,
+			"unix"
+		],
+		"semi": [
+			2,
+			"always"
+		],
+		"valid-typeof": 0,
+		"no-undef": [
+			2,
+			{
+				"typeof": true
+			}
+		],
+		"mocha/no-exclusive-tests": 2
+	},
+	"env": {
+		"es6": true,
+		"node": true,
+		"mocha": true
+	},
+	"extends": "eslint:recommended"
+}

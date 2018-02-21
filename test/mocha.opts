@@ -1,0 +1,8 @@
+--ui bdd
+--recursive
+--retry 5
+--timeout 240000
+--require mocha-steps
+--reporter mochawesome --reporter-options reportDir=results,reportFilename=API_Automation_Suite_Run
+test/init.js
+test/**/*.test.js

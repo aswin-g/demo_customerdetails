@@ -1,0 +1,12 @@
+node_modules/
+.project
+.idea/
+.vscode/
+.settings/
+.git/
+logs/
+results/
+mochawesome-report/
+output/
+*.log
+*.tmp
