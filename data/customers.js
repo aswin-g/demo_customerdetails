@@ -128,4 +128,11 @@ global.customers = {
         "swift_code": "ICBCUSBJ",
         "aba": "111"
       },
+      customer16: {
+        "payment_method": "SWIFT",
+        "bank_country_code": "NZ",
+        "account_name": "John Smith",
+        "account_number": "123",
+        "swift_code": "ICBCUSBJ"
+      },
 };
